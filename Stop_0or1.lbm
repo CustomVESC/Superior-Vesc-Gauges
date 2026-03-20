@@ -1,0 +1,6 @@
+(gpio-configure 'pin-ppm 'pin-mode-out)
+
+(loopwhile t
+  (progn
+    (gpio-write 'pin-ppm (if (> (get-adc 1) 0.92) 1 0))
+    (sleep 0.05)))
