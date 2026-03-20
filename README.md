@@ -45,7 +45,7 @@ readonly property var defaultSocVoltages: [
 ```
 
 ### Wymagania
-- VESC Tool (Windows / Linux / Android / iOS)
+- VESC Tool (Windows / Linux)
 - Firmware VESC
 ---
 
@@ -53,7 +53,7 @@ readonly property var defaultSocVoltages: [
 
 Dwa skrypty LispBM do sterowania lampką STOP przez **pin PPM** (skonfigurowany jako wyjście cyfrowe). Hamowanie jest wykrywane gdy **napięcie na ADC2 przekroczy 0,95 V** (czujnik dźwigni hamulca).
 
-### `0_lub_1.lisp` – Lampka STOP włącz/wyłącz
+### `Stop_0or1.lisp` – Lampka STOP włącz/wyłącz
 
 Pin PPM jest **domyślnie w stanie niskim** i przechodzi w **stan wysoki tylko podczas hamowania**.
 
@@ -68,7 +68,7 @@ Przeznaczenie:
 
 ---
 
-### `3Hz.lisp` – Migająca lampka STOP (3 Hz)
+### `Stop_3Hz.lisp` – Migająca lampka STOP (3 Hz)
 
 Pin PPM jest **cały czas w stanie wysokim** i **miga z częstotliwością 3 Hz podczas hamowania**.
 
