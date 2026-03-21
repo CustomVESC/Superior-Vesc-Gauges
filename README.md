@@ -83,7 +83,7 @@ Przeznaczenie:
 ---
 
 ## Instalacja
-Instrukcja bedzie znajdować się w [Instrukcja](Instrukcja.md)
+Instrukcja bedzie znajdować się w > 📖 [Instrukcja instalacji](Instrukcja.md)
 
 ---
 
