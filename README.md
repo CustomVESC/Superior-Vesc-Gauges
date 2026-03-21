@@ -1,40 +1,34 @@
 # SuperiorGauges – Zaawansowany ekran wskaźników dla VESC Tool
 
-Zamiennik domyślnego ekranwu RT Data w VESC Tool, zaprojektowany dla rowerów elektrycznych, elektrycznych hulajnóg i innych pojazdów opartych na sterownikach VESC. W repozytorium znajdują się również dwa skrypty LispBM do sterowania lampką STOP.
-![Screenshot_2026-03-20-20-36-06-875_vedder vesctool](https://github.com/user-attachments/assets/82cefdfd-b35d-468f-9b85-c2a82dd8c8e7)
-![Screenshot_2026-03-20-20-36-32-609_vedder vesctool](https://github.com/user-attachments/assets/1db3542f-7536-4b06-9b10-4a1a49a8d478)
-
-
-
+Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów elektrycznych, elektrycznych hulajnóg i innych pojazdów opartych na sterownikach VESC. W repozytorium znajdują się również dwa skrypty LispBM do sterowania lampką STOP.
+![Ekran_główny](https://github.com/user-attachments/assets/76baa709-ef88-4dd6-8ae5-f6c99b10cc27)
+![Ekran_kalibracji](https://github.com/user-attachments/assets/3166a0f4-dd1e-4397-bebf-5be6a326e277)
 ---
 
 ## Ekran wskaźników – SuperiorGauges.qml
 
-### Funkcje
+### Nowe Funkcje
 
-- **Zegary prędkości, prądu fazowego, prądu baterii i mocy** z automatycznym doborem zakresu z konfiguracji VESC
+- **Zegar prądu baterii** z automatycznym doborem zakresu
 - **Obsługa wielu VESC przez CAN** – prąd baterii jest sumą ze wszystkich podłączonych sterowników, co sprawia że skrypt nadaje się do pojazdów dwusilnikowych
 - **Mnożnik kalibracji napięcia** – koryguje niedokładność wewnętrznego pomiaru ADC sterownika VESC
 - **Własna tabela SOC** – stan naładowania obliczany z definiowanej przez użytkownika krzywej napięciowej ogniwa, niezależnie od wbudowanego algorytmu VESC. Domyślna krzywa: Sony VTC6
-- **Szacowanie zasięgu** i zużycie energii (Wh/km lub Wh/mi)
-- **Temperatury ESC i silnika** z progami ostrzegawczymi odczytywanymi z limitów konfiguracji VESC
-- **Odometer, dystans przejazdu, czas działania**
 - **Woltomierz** pokazujący skalibrowane napięcie pakietu
 
 ### Ekran kalibracji (resetuje się przy kazdym wyłaczeniu sterownika)
 Przesuń palcem z dołu do góry na ekranie głównym, aby uzyskać dostęp do:
-- Mnożnika kalibracji napięcia z przyciskami ± (krok 0.001)
+- Mnożnika kalibracji napięcia
 - Edytowalnej tabeli napięć ogniwa
 
 ### Tabele napięć ogniw
-Aby ułatwić dobór wartości do tabeli SOC dla różnych typów ogniw, przygotowana została tabela w Google Sheets zawierająca krzywe napięciowe popularnych ogniw litowo-jonowych:
+Aby ułatwić dobór wartości do tabeli SOC dla różnych typów ogniw, przygotowałem tabelę w Google Sheets zawierającą krzywe napięciowe popularnych ogniw litowo-jonowych:
 
 📊 **[Tabela napięć ogniw – Google Sheets](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
 
-Na jej podstawie możesz odczytać napięcie ogniwa odpowiadające danemu poziomowi naładowania i wpisać je bezpośrednio do ekranu kalibracji lub do sekcji `defaultSocVoltages` w pliku QML.
+Na jej podstawie możesz odczytać poziom naładowania odpowiadający danemu napięcie ogniwa i wpisać je bezpośrednio do ekranu kalibracji lub do sekcji `defaultSocVoltages` w pliku QML.
 
 ### Konfiguracja domyślna
-Edytuj sekcję **`USTAWIENIA DOMYŚLNE`** na początku bloku `Item {}` w pliku QML:
+Edytuj sekcję **`USTAWIENIA DOMYŚLNE`** na początku pliku QML (wiersz 38-48):
 
 ```qml
 // Mnożnik kalibracji napięcia (1.0 = bez korekcji)
@@ -49,13 +43,13 @@ readonly property var defaultSocVoltages: [
 ```
 
 ### Wymagania
-- VESC Tool (Windows / Linux)
-- Firmware VESC
+- zainastlowany VESC Tool na Windows, Mac lub Linux
+- multimetr lub smartBMS (do sprawdzenia prawidłowego napięcia)
 ---
 
 ## Skrypty lampki STOP – LispBM
 
-Dwa skrypty LispBM do sterowania lampką STOP przez **pin PPM** (skonfigurowany jako wyjście cyfrowe). Hamowanie jest wykrywane gdy **napięcie na ADC2 przekroczy 0,95 V** (czujnik dźwigni hamulca).
+Dwa skrypty LispBM do sterowania lampką STOP przez **pin PPM** (skonfigurowany jako wyjście). Hamowanie jest wykrywane gdy **napięcie na pinie ADC2 przekroczy 0,95 V**.
 
 ### `Stop_0or1.lisp` – Lampka STOP włącz/wyłącz
 
@@ -88,16 +82,7 @@ Przeznaczenie:
 ---
 
 ## Instalacja
-
-**Ekran QML:**
-1. Otwórz VESC Tool
-2. Przejdź do zakładki **Scripting**
-3. Wczytaj plik `SuperiorGauges.qml` i kliknij **Run**
-
-**Skrypt LispBM:**
-1. Podłącz czujnik dźwigni hamulca lub manetkę regenu do pinu **ADC2**
-2. Przejdź do zakładki **LispBM** w VESC Tool
-3. Wczytaj odpowiedni plik `.lisp` i kliknij **Run**
+Instrukcja bedzie znajdować się w pliku Instrukcja.md
 
 ---
 
