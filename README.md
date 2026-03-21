@@ -83,7 +83,7 @@ Przeznaczenie:
 ---
 
 ## Instalacja
-Instrukcja bedzie znajdować się 
+Instrukcja bedzie znajdować się w [Instrukcja.md](https://github.com/user-attachments/files/26153026/Instrukcja.md)
 
 ---
 
