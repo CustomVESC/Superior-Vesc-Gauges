@@ -83,7 +83,7 @@ Przeznaczenie:
 ---
 
 ## Instalacja
-Instrukcja bedzie znajdować się w pliku Instrukcja.md
+Instrukcja bedzie znajdować się 
 
 ---
 
