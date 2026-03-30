@@ -4,11 +4,15 @@ Następnie wprowadzić tą wartość w kroku 5 oraz napięcia dla różnych pozi
 Nastepnie złożyć plik QML w Vesc Package i wgrać ponownie na vesc.
 
 ---
-
+Najpierw pobieramy pluk
+Kalibracja_Napięcia.vescpkg w celu sprawdzenia poprawnego mnożnika poprawiającego dokładność wskazania napięcia.
+W menu start wybramy opcje package store.
 ![kalibracjaNapięcia_krok_1](https://github.com/user-attachments/assets/d0fde1e8-0c2f-43a0-afb4-fbd13b2d167e)
+Następnie klikamy w 3 kropki w lewym dolnym rogu
 ![kalibracjaNapięcia_krok_2](https://github.com/user-attachments/assets/bcc654a1-ca1f-45d3-b971-9a1733dce7ed)
+i wybieramy install from file
 ![kalibracjaNapięcia_krok_3](https://github.com/user-attachments/assets/903464e0-15da-424a-ab41-f79f1d47b434)
-
+następnie wybieramy plik Kalibracja_Napięcia.vescpkg2
 ---
 
 <img width="1918" height="1021" alt="krok1" src="https://github.com/user-attachments/assets/ac7dedb5-3edb-465e-a829-1b7a91dba5a0" />
