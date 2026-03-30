@@ -13,7 +13,8 @@ Następnie klikamy w 3 kropki w lewym dolnym rogu
 ![kalibracjaNapięcia_krok_2](https://github.com/user-attachments/assets/bcc654a1-ca1f-45d3-b971-9a1733dce7ed)
 i wybieramy install from file
 ![kalibracjaNapięcia_krok_3](https://github.com/user-attachments/assets/903464e0-15da-424a-ab41-f79f1d47b434)
-następnie wybieramy plik Kalibracja_Napięcia.vescpkg
+następnie wybieramy plik Kalibracja_Napięcia.vescpkg i go wgrywamy
+Po wgraniu pokaże się dodatkowa zakładka w której zobaczymy nowe zegary a pod nimi można sprawdzić z jakim mnożnikiem na zegarze pojawi się poprawne napięcie. (Uwaga vesc przy każdym uruchomieniu będzie wracał do domyślnej wartości mnożnika napięcia i tabelki SOC dlatego trzeba je nadpisać w pliku qml.
 ---
 
 Pobieramy plik SuperiorGauges.qml następnie
