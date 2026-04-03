@@ -16,7 +16,7 @@ Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów el
 - **Własna tabela SOC** – stan naładowania obliczany z definiowanej przez użytkownika krzywej napięciowej ogniwa, niezależnie od wbudowanego algorytmu VESC. Domyślna krzywa: Sony VTC6
 - **Woltomierz** pokazujący skalibrowane napięcie pakietu
 
-### Ekran kalibracji (resetuje się przy kazdym wyłaczeniu sterownika)
+### Ekran kalibracji (resetuje się przy każdym wyłączeniu sterownika)
 Przesuń palcem z dołu do góry na ekranie głównym, aby uzyskać dostęp do:
 - Mnożnika kalibracji napięcia
 - Edytowalnej tabeli napięć ogniwa
@@ -44,7 +44,7 @@ readonly property var defaultSocVoltages: [
 ```
 
 ### Wymagania
-- zainastlowany VESC Tool na Windows, Mac lub Linux
+- zainstalowany VESC Tool na Windows, Mac lub Linux
 - multimetr lub smartBMS (do sprawdzenia prawidłowego napięcia)
 ---
 
@@ -83,7 +83,7 @@ Przeznaczenie:
 ---
 
 ## Instalacja
-Instrukcja bedzie znajdować się w > 📖 [Instrukcja instalacji](Instrukcja.md)
+Instrukcja znajduje się w > 📖 [Instrukcja instalacji](Instrukcja.md)
 
 ---
 
