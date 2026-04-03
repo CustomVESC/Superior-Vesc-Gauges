@@ -1,4 +1,4 @@
-w# SuperiorGauges – Instrukcja
+# SuperiorGauges – Instrukcja
 Najpierw trzeba wgrać Kalibracja_Napięcia.vescpkg i sprawdzić mnożnik kalibracji dla swojego sterownika.
 Następnie wprowadzić tą wartość w kroku 5 oraz napięcia dla różnych poziomów naładowania w kroku 6.
 Nastepnie złożyć plik QML w Vesc Package i wgrać ponownie na vesc.
