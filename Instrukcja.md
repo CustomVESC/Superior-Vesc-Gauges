@@ -1,4 +1,4 @@
-# SuperiorGauges – Instrukcja
+w# SuperiorGauges – Instrukcja
 Najpierw trzeba wgrać Kalibracja_Napięcia.vescpkg i sprawdzić mnożnik kalibracji dla swojego sterownika.
 Następnie wprowadzić tą wartość w kroku 5 oraz napięcia dla różnych poziomów naładowania w kroku 6.
 Nastepnie złożyć plik QML w Vesc Package i wgrać ponownie na vesc.
@@ -27,16 +27,19 @@ klikamy ikonkę folderu by wybrać plik .qml
 Wybieramy pobrany plik SuperiorGauges.qml
 <img width="925" height="662" alt="krok3i4" src="https://github.com/user-attachments/assets/541e47f9-fa80-4aaf-9127-69dea6ce5a1a" />
 W punkcie 5 wpisujemy mnożnik napięcia który skoryguje zakłamanie woltomierza.
-W punkcie 6 poprawiamy tabelkę na podstawie której obliczany jest stan naładowania, jest ona domyślnie ustawiona dla Sony vtc6  (link do tabelki można znaleźć w ReadMe.md)
+W punkcie 6 poprawiamy tabelkę na podstawie której obliczany jest stan naładowania, jest ona domyślnie ustawiona dla Sony vtc6  (link do tabelki można znaleźć w ReadMe.md).
 Na koniec klikamy dyskietkę w celu nadpisania zmian.
 <img width="1918" height="1018" alt="krok5_6_7" src="https://github.com/user-attachments/assets/534c96fa-88d9-4253-a5f8-1c89a9e86f68" />
-Wybiramy Package Store i wtedy Create Package
+Wybieramy zakładkę Package Store, następnie Create Package
 <img width="1918" height="1020" alt="krok8_9" src="https://github.com/user-attachments/assets/cc0e51fb-0def-470b-a25f-6b023983fe4e" />
-
+W kroku 10 upewniamy się że przy QML kwadracik jest zaznaczony i następnie w kroku 11 wybiewramy wcześniej zmodyfikowany plik QML.
+Krok 12 i 13 jest dla osób które podłączają lampkę stop-u do vesc (potrzebny mosfet z optoizolacją) i wtdy należy wgrać skrypt z końcówką .lbm.
 <img width="1918" height="1018" alt="krok10_11_12_13" src="https://github.com/user-attachments/assets/01a3d1c8-39ca-4fe8-9c70-9fe297c79bf6" />
+Zapisujemy paczkę
 <img width="1917" height="1026" alt="krok14" src="https://github.com/user-attachments/assets/e43c94ad-fef1-437c-b0bf-e8b2f3fe50f8" />
 
 ---
+Na koniec wygrywamy poprawioną paczkę do sterownika.
 
 ![kalibracjaNapięcia_krok_1](https://github.com/user-attachments/assets/d0fde1e8-0c2f-43a0-afb4-fbd13b2d167e)
 ![kalibracjaNapięcia_krok_2](https://github.com/user-attachments/assets/bcc654a1-ca1f-45d3-b971-9a1733dce7ed)
