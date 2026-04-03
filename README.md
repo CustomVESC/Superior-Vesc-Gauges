@@ -26,7 +26,7 @@ Aby ułatwić dobór wartości do tabeli SOC dla różnych typów ogniw, przygot
 
 📊 **[Tabela napięć ogniw – Google Sheets](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
 
-Na jej podstawie możesz odczytać poziom naładowania odpowiadający danemu napięcie ogniwa i wpisać je bezpośrednio do ekranu kalibracji lub do sekcji `defaultSocVoltages` w pliku QML.
+Na jej podstawie możesz odczytać poziom naładowania odpowiadający danemu napięciu ogniwa i wpisać je bezpośrednio do ekranu kalibracji lub do sekcji `defaultSocVoltages` w pliku QML.
 
 ### Konfiguracja domyślna
 Edytuj sekcję **`USTAWIENIA DOMYŚLNE`** na początku pliku QML (wiersz 38-48):
