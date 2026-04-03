@@ -52,7 +52,7 @@ readonly property var defaultSocVoltages: [
 
 Dwa skrypty LispBM do sterowania lampką STOP przez **pin PPM** (skonfigurowany jako wyjście). Hamowanie jest wykrywane gdy **napięcie na pinie ADC2 przekroczy 0,95 V**.
 
-### `Stop_0or1.lisp` – Lampka STOP włącz/wyłącz
+### `Stop_0or1.lbm` – Lampka STOP włącz/wyłącz
 
 Pin PPM jest **domyślnie w stanie niskim** i przechodzi w **stan wysoki tylko podczas hamowania**.
 
@@ -67,7 +67,7 @@ Przeznaczenie:
 
 ---
 
-### `Stop_3Hz.lisp` – Migająca lampka STOP (3 Hz)
+### `Stop_3Hz.lbm` – Migająca lampka STOP (3 Hz)
 
 Pin PPM jest **cały czas w stanie wysokim** i **miga z częstotliwością 3 Hz podczas hamowania**.
 
