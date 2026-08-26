@@ -10,8 +10,9 @@ Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów el
 
 ## Ekran wskaźników
 
-### Ekran 1 – Główne zegary
 <img width="864" height="1920" alt="VID_20260826_112219" src="https://github.com/user-attachments/assets/f946f95e-e01d-43fc-b037-c8e3c7119330" />
+
+### Ekran 1 – Główne zegary
 
 - Prąd fazowy, moc, prąd baterii, prędkość, napięcie, temperatura sterownika i silnika, zużycie energii
 - **Prąd baterii i moc sumowane ze wszystkich podłączonych sterowników** (pojazdy dwusilnikowe)
