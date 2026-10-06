@@ -5,10 +5,10 @@ Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów el
 **Wersja V3.0** to pełne przepisanie projektu na architekturę **LispBM (backend na sterowniku) + QML (interfejs w telefonie)**. W przeciwieństwie do wersji 2 (czysty QML), wszystkie ustawienia żyją teraz w pamięci sterownika przetrwają zamknięcie aplikacji, a wszystkie zmiany robi się bezpośrednio w apce, bez dotykania kodu na komputerze. Lampka STOP jest teraz wbudowana w główny skrypt, nie wymaga osobnego pliku.
 
 **Wersja V3.1** dodała zmiany w działaniu tempomatu. Przy zegarach jest kontrolka pokazująca stan tempomatu. Tempomat ma dostępne 4 opcje:
-/n-Brak zmiany w oryginalnym tempomacie
-/n-przycisk bistabilny (tempomat aktywowany przyciskiem bistabilny)
-/n-przycisk monostabilny (tempomat aktywowany przyciskiem monostabilnym)
-/n-Aktywacja po czasie (tempomat aktywowany jest poprzez trzymanie gazu w jednej pozycji przez kilka sekund 1-6s regulowane suwakiem). Tempomat w tym trybie wyłączy się po naciśnięciu gazu lub hamulca.
+/n -Brak zmiany w oryginalnym tempomacie
+/n -przycisk bistabilny (tempomat aktywowany przyciskiem bistabilny)
+/n -przycisk monostabilny (tempomat aktywowany przyciskiem monostabilnym)
+/n -Aktywacja po czasie (tempomat aktywowany jest poprzez trzymanie gazu w jednej pozycji przez kilka sekund 1-6s regulowane suwakiem). /n Tempomat w tym trybie wyłączy się po naciśnięciu gazu lub hamulca.
 
 Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naciśnięci gazu można regulować prędkość.
 
@@ -18,7 +18,7 @@ Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naci
 
 <img width="864" height="1920" alt="VID_20260826_112219" src="https://github.com/user-attachments/assets/f946f95e-e01d-43fc-b037-c8e3c7119330" />
 
-### Ekran 1 – Główne zegary
+### Ekran 1 Główne zegary
 
 - Prąd fazowy, moc, prąd baterii, prędkość, napięcie, temperatura sterownika i silnika, zużycie energii
 - **Prąd baterii i moc sumowane ze wszystkich podłączonych sterowników** (pojazdy dwusilnikowe)
@@ -28,18 +28,18 @@ Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naci
 - Efekt „wymiatania" wskazówek trwający podczas ładowania danych skryptu
 - kontrolka pokazująca stan tempomatu
 
-### Ekran 2 – Statystyki jazdy
+### Ekran 2 Statystyki jazdy
 
 - SOC na początku jazdy i zużycie od tego momentu
 - Zużycie energii (Wh/km) liczone z SOC, oraz osobno z ostatnich 2 km wg VESC
 - Zasięg pozostały i zasięg 100–0%, liczone z tabelki SOC którą można dostosować pod swoją baterię
 - Maksymalny prąd baterii i prąd fazowy osobno dla każdego sterownika
 - Maksymalna moc, maksymalna rekuperacja, maksymalne i minimalne napięcie zarejestrowane podczas jazdy
-- **Guzik trybu Legal** — jeden przycisk włączający/wyłączający ograniczenia prędkości, mocy i prądu; działa poprawnie na pojazdach jedno- i dwusilnikowych, automatycznie zapamiętuje i przywraca oryginalne ustawienia obu sterowników
+- **Guzik trybu Legal**  jeden przycisk włączający/wyłączający ograniczenia prędkości, mocy i prądu; działa poprawnie na pojazdach jedno- i dwusilnikowych, automatycznie zapamiętuje i przywraca oryginalne ustawienia obu sterowników
 
-### Ekran 3 – Ustawienia
+### Ekran 3 Ustawienia
 
-- **Lampka STOP** — 3 tryby (wyłączona / zapala się przy hamowaniu / świeci stale i miga przy hamowaniu), próg aktywacji ustawiany suwakiem jako % wciśnięcia hamulca
+- **Lampka STOP** 3 tryby (wyłączona / zapala się przy hamowaniu / świeci stale i miga przy hamowaniu), próg aktywacji ustawiany suwakiem jako % wciśnięcia hamulca
 - Możliwość zmiany ustawień trybu Legal
 - Możliwość zmiany działania tempomatu
 - Mnożnik kalibracji napięcia — korekta niedokładności pomiaru napięcia mierzonego przez sterownik
@@ -50,7 +50,7 @@ Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naci
 
 ### Trwałość ustawień
 
-Wszystkie ustawienia (próg lampki STOP, limity trybu Legal, tryb tempomatu, kalibracja napięcia, tabela SOC) żyją w pamięci RAM sterownika — **przetrwają zamknięcie i ponowne otwarcie aplikacji**, niezależnie od telefonu. Żeby przetrwały też **fizyczny restart sterownika**, trzeba je dodatkowo zapisać do EEPROM przyciskiem „Zapisz ustawienia" na ekranie 3.
+Wszystkie ustawienia (próg lampki STOP, limity trybu Legal, tryb tempomatu, kalibracja napięcia, tabela SOC) żyją w pamięci RAM sterownika **przetrwają zamknięcie i ponowne otwarcie aplikacji**, niezależnie od telefonu. Żeby przetrwały też **fizyczny restart sterownika**, trzeba je dodatkowo zapisać do EEPROM przyciskiem „Zapisz ustawienia" na ekranie 3.
 
 ---
 
@@ -71,8 +71,7 @@ Prąd baterii, moc i statystyki maksimów sumują/śledzą dane z **obu** sterow
 ### Tabele napięć ogniw
 
 Aby ułatwić dobór wartości do tabeli SOC dla różnych typów ogniw, dostępna jest tabela w Google Sheets z krzywymi napięciowymi wielu modeli ogniw litowo-jonowych:
-
-📊 **[Tabela napięć ogniw – Google Sheets](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
+ **[Tabela napięć ogniw – Google Sheets](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
 
 Na jej podstawie możesz odczytać poziom naładowania odpowiadający danemu napięciu ogniwa i wpisać go bezpośrednio na ekranie 3.
 
@@ -95,7 +94,7 @@ Repozytorium zawiera dwa pakiety:
 
 Pliki z poprzedniej wersji (v2) znajdują się w folderze `stary skryptV2`, zachowane archiwalnie.
 
-Pełna instrukcja krok po kroku: 📖 [Instrukcja instalacji](Instrukcja.md)
+Pełna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
 
 ---
 
