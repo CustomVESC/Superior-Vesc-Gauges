@@ -1,17 +1,17 @@
 ## Superior Gauges: ekran wskaźników dla VESC Tool
 
-Superior Gauges to zamiennik domyślnego ekranu RT Data w VESC Tool. Zrobiłem go z myślą o rowerach elektrycznych, hulajnogach i innych pojazdach jeżdżących na sterownikach VESC.
+Superior Gauges to zamiennik domyślnego ekranu RT Data w VESC Tool. Zrobiłem go z myślą o rowerach elektrycznych, hulajnogach i innych pojazdach używających sterowników VESC.
 
 ### Co nowego
 
-**V3.0** to projekt napisany od nowa. Logika działa teraz na sterowniku (LispBM), a telefon odpowiada tylko za wyświetlanie (QML). W praktyce oznacza to, że ustawienia siedzą w pamięci sterownika i nie znikają po zamknięciu aplikacji. Wszystko zmienia się bezpośrednio w apce, bez grzebania w kodzie na komputerze. Lampka STOP jest już częścią głównego skryptu, więc nie trzeba wgrywać osobnego pliku.
+**V3.0** to projekt napisany od nowa. Logika działa teraz na sterowniku, a telefon odpowiada tylko za wyświetlanie zegarów. W praktyce oznacza to, że ustawienia siedzą w pamięci sterownika i nie znikają po zamknięciu aplikacji. Wszystko zmienia się bezpośrednio w apce, bez grzebania w kodzie na komputerze. Lampka STOP jest już częścią głównego skryptu, więc nie trzeba wgrywać osobnego pliku.
 
 **V3.1** przynosi zmiany w tempomacie. Przy zegarach pojawiła się kontrolka pokazująca jego stan, a w ustawieniach można wybrać jeden z czterech trybów:
 
 - **Bez zmian:** działa oryginalny tempomat z VESC
-- **Przycisk bistabilny:** tempomat włączasz i wyłączasz przyciskiem z zatrzaskiem
-- **Przycisk monostabilny:** tempomat włączasz zwykłym przyciskiem chwilowym
-- **Aktywacja po czasie:** tempomat włącza się, gdy trzymasz gaz w jednej pozycji przez kilka sekund (od 1 do 6 s, ustawiane suwakiem)
+- **Przycisk bistabilny:** tempomat włączany i wyłączany przyciskiem z zatrzaskiem
+- **Przycisk monostabilny:** tempomat włączany zwykłym przyciskiem chwilowym
+- **Aktywacja po czasie:** tempomat włącza się, gdy gaz jest trzymany w jednej pozycji przez kilka sekund (od 1 do 6 s, ustawiane suwakiem)
 
 W trybach z przyciskiem tempomat wyłącza się po wciśnięciu hamulca, a gazem można w trakcie regulować prędkość. W trybie aktywacji po czasie tempomat wyłącza się po ruszeniu gazem albo hamulcem.
 
@@ -38,7 +38,7 @@ W trybach z przyciskiem tempomat wyłącza się po wciśnięciu hamulca, a gazem
 - pozostały zasięg i zasięg od 100 do 0%, liczone z tabeli SOC, którą możesz dopasować do swojej baterii
 - maksymalny prąd baterii i prąd fazowy, osobno dla każdego sterownika
 - maksymalna moc, maksymalna rekuperacja oraz najwyższe i najniższe napięcie z całej jazdy
-- **przycisk trybu Legal:** jednym kliknięciem włączasz albo wyłączasz ograniczenia prędkości, mocy i prądu. Działa przy jednym i dwóch silnikach, a oryginalne ustawienia obu sterowników zapamiętuje i przywraca sam
+- **przycisk trybu Legal:** jednym kliknięciem można włączyć/wyłączyć ograniczenia prędkości, mocy i prądu. Działa przy jednym i dwóch silnikach.
 
 ### Ekran 3: ustawienia
 
