@@ -95,7 +95,7 @@ W repozytorium są dwa pakiety:
 - **`SuperiorGauge_V3.0.vescpkg`**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
 - **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgrywa się go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
 
-Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `StarySkryptV2`.
+Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `StarySkryptV2`[Folder z poprzednią wersją skryptu](StarySkryptV2).
 
 Dokładna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
 
