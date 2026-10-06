@@ -4,7 +4,7 @@
 
 Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów elektrycznych, elektrycznych hulajnóg i innych pojazdów opartych na sterownikach VESC.
 
-**Wersja V3.0** to pełne przepisanie projektu na architekturę **LispBM (backend na sterowniku) + QML (interfejs w telefonie)**. W przeciwieństwie do wersji 2 (czysty QML), wszystkie ustawienia żyją teraz w pamięci sterownika przetrwają zamknięcie aplikacji, a wszystkie zmiany robi się bezpośrednio w apce, bez dotykania kodu na komputerze. Lampka STOP jest teraz wbudowana w główny skrypt, nie wymaga osobnego pliku.
+**Wersja V3** to pełne przepisanie projektu na architekturę **LispBM (backend na sterowniku) + QML (interfejs w telefonie)**. W przeciwieństwie do wersji 2 (czysty QML), wszystkie ustawienia żyją teraz w pamięci sterownika przetrwają zamknięcie aplikacji, a wszystkie zmiany robi się bezpośrednio w apce, bez dotykania kodu na komputerze. Lampka STOP jest teraz wbudowana w główny skrypt, nie wymaga osobnego pliku.
 
 **Wersja V3.1** dodała zmiany w działaniu tempomatu. Przy zegarach jest kontrolka pokazująca stan tempomatu. Tempomat ma dostępne 4 opcje:
 -Brak zmiany w oryginalnym tempomacie
