@@ -1,14 +1,14 @@
-## Superior Gauges – Zaawansowany ekran wskaźników dla VESC Tool
+w## Superior Gauges – Zaawansowany ekran wskaźników dla VESC Tool
 
 Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów elektrycznych, elektrycznych hulajnóg i innych pojazdów opartych na sterownikach VESC.
 
 **Wersja V3.0** to pełne przepisanie projektu na architekturę **LispBM (backend na sterowniku) + QML (interfejs w telefonie)**. W przeciwieństwie do wersji 2 (czysty QML), wszystkie ustawienia żyją teraz w pamięci sterownika przetrwają zamknięcie aplikacji, a wszystkie zmiany robi się bezpośrednio w apce, bez dotykania kodu na komputerze. Lampka STOP jest teraz wbudowana w główny skrypt, nie wymaga osobnego pliku.
 
 **Wersja V3.1** dodała zmiany w działaniu tempomatu. Przy zegarach jest kontrolka pokazująca stan tempomatu. Tempomat ma dostępne 4 opcje:
--Brak zmiany w oryginalnym tempomacie
--przycisk bistabilny (tempomat aktywowany przyciskiem bistabilny)
--przycisk monostabilny (tempomat aktywowany przyciskiem monostabilnym)
--Aktywacja po czasie (tempomat aktywowany jest poprzez trzymanie gazu w jednej pozycji przez kilka sekund 1-6s regulowane suwakiem). Tempomat w tym trybie wyłączy się po naciśnięciu gazu lub hamulca.
+/n-Brak zmiany w oryginalnym tempomacie
+/n-przycisk bistabilny (tempomat aktywowany przyciskiem bistabilny)
+/n-przycisk monostabilny (tempomat aktywowany przyciskiem monostabilnym)
+/n-Aktywacja po czasie (tempomat aktywowany jest poprzez trzymanie gazu w jednej pozycji przez kilka sekund 1-6s regulowane suwakiem). Tempomat w tym trybie wyłączy się po naciśnięciu gazu lub hamulca.
 
 Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naciśnięci gazu można regulować prędkość.
 
