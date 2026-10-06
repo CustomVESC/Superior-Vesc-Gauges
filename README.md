@@ -35,14 +35,14 @@ W trybach z przyciskiem tempomat wyłącza się po wciśnięciu hamulca, a gazem
 
 - SOC na początku jazdy i ile od tego czasu ubyło
 - zużycie energii w Wh/km, liczone na dwa sposoby: z SOC oraz z ostatnich 2 km według VESC
-- pozostały zasięg i zasięg od 100 do 0%, liczone z tabeli SOC, którą możesz dopasować do swojej baterii
+- pozostały zasięg i zasięg od 100 do 0%, liczone z tabeli SOC, którą można dopasować do swojej baterii
 - maksymalny prąd baterii i prąd fazowy, osobno dla każdego sterownika
 - maksymalna moc, maksymalna rekuperacja oraz najwyższe i najniższe napięcie z całej jazdy
 - **przycisk trybu Legal:** jednym kliknięciem można włączyć/wyłączyć ograniczenia prędkości, mocy i prądu. Działa przy jednym i dwóch silnikach.
 
 ### Ekran 3: ustawienia
 
-- **lampka STOP** z trzema trybami: wyłączona, zapalana przy hamowaniu albo świecąca cały czas i migająca przy hamowaniu. Próg zadziałania ustawiasz suwakiem jako procent wciśnięcia hamulca
+- **lampka STOP** z trzema trybami: wyłączona, zapalana przy hamowaniu albo świecąca cały czas i migająca przy hamowaniu. Próg zadziałania ustawia się suwakiem jako procent wciśnięcia hamulca
 - ustawienia limitów trybu Legal
 - wybór trybu tempomatu
 - mnożnik kalibracji napięcia, gdy sterownik mierzy je trochę niedokładnie
@@ -65,7 +65,7 @@ W pojeździe dwusilnikowym (połączenie CAN) prąd baterii, moc i statystyki ma
 
 ### Znane ograniczenia
 
-- Przycisk „Reset do domyślnych" na ekranie 3 czyści tylko pamięć RAM. Żeby reset przetrwał restart sterownika, kliknij potem jeszcze „Zapisz ustawienia".
+- Przycisk „Reset do domyślnych" na ekranie 3 czyści tylko pamięć RAM. Żeby reset przetrwał restart sterownika, trzeba potem jeszcze kliknąć „Zapisz ustawienia".
 - Po wgraniu pakietu czasem trzeba raz wpisać `restart lispbm` w terminalu VESC Tool, żeby LispBM normalnie wystartował przy kolejnym uruchomieniu sterownika. To ograniczenie firmware, występuje od wersji 6.06.
 
 ---
@@ -76,7 +76,7 @@ W pojeździe dwusilnikowym (połączenie CAN) prąd baterii, moc i statystyki ma
 
 **[Tabela napięć ogniw (Google Sheets)](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
 
-Znajdź w niej swoje ogniwo, odczytaj, jakiemu poziomowi naładowania odpowiada dane napięcie, i wpisz wartości na ekranie 3.
+Wystarczy znaleźć w niej swoje ogniwo, odczytać, jakiemu poziomowi naładowania odpowiada dane napięcie, i wpisać wartości na ekranie 3.
 
 ---
 
@@ -92,10 +92,10 @@ Znajdź w niej swoje ogniwo, odczytaj, jakiemu poziomowi naładowania odpowiada 
 
 W repozytorium są dwa pakiety:
 
-- **`SuperiorGauge_V3.0.vescpkg`**: główny pakiet z ekranem wskaźników i całą logiką. Wgraj go na **tylny sterownik (master)**.
-- **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgraj go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
+- **`SuperiorGauge_V3.0.vescpkg`**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
+- **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgrywa się go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
 
-Pliki z poprzedniej wersji (V2) zostawiłem dla porządku w folderze `stary skryptV2`.
+Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `stary skryptV2`.
 
 Dokładna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
 
