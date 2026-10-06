@@ -1,16 +1,19 @@
-w## Superior Gauges – Zaawansowany ekran wskaźników dla VESC Tool
+## Superior Gauges: ekran wskaźników dla VESC Tool
 
-Zamiennik domyślnego ekranu RT Data w VESC Tool, zaprojektowany dla rowerów elektrycznych, elektrycznych hulajnóg i innych pojazdów opartych na sterownikach VESC.
+Superior Gauges to zamiennik domyślnego ekranu RT Data w VESC Tool. Zrobiłem go z myślą o rowerach elektrycznych, hulajnogach i innych pojazdach jeżdżących na sterownikach VESC.
 
-**Wersja V3.0** to pełne przepisanie projektu na architekturę **LispBM (backend na sterowniku) + QML (interfejs w telefonie)**. W przeciwieństwie do wersji 2 (czysty QML), wszystkie ustawienia żyją teraz w pamięci sterownika przetrwają zamknięcie aplikacji, a wszystkie zmiany robi się bezpośrednio w apce, bez dotykania kodu na komputerze. Lampka STOP jest teraz wbudowana w główny skrypt, nie wymaga osobnego pliku.
+### Co nowego
 
-**Wersja V3.1** dodała zmiany w działaniu tempomatu. Przy zegarach jest kontrolka pokazująca stan tempomatu. Tempomat ma dostępne 4 opcje:
-\n -Brak zmiany w oryginalnym tempomacie
-\n -przycisk bistabilny (tempomat aktywowany przyciskiem bistabilny)
-\n -przycisk monostabilny (tempomat aktywowany przyciskiem monostabilnym)
-\n -Aktywacja po czasie (tempomat aktywowany jest poprzez trzymanie gazu w jednej pozycji przez kilka sekund 1-6s regulowane suwakiem). \n Tempomat w tym trybie wyłączy się po naciśnięciu gazu lub hamulca.
+**V3.0** to projekt napisany od nowa. Logika działa teraz na sterowniku (LispBM), a telefon odpowiada tylko za wyświetlanie (QML). W praktyce oznacza to, że ustawienia siedzą w pamięci sterownika i nie znikają po zamknięciu aplikacji. Wszystko zmienia się bezpośrednio w apce, bez grzebania w kodzie na komputerze. Lampka STOP jest już częścią głównego skryptu, więc nie trzeba wgrywać osobnego pliku.
 
-Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naciśnięci gazu można regulować prędkość.
+**V3.1** przynosi zmiany w tempomacie. Przy zegarach pojawiła się kontrolka pokazująca jego stan, a w ustawieniach można wybrać jeden z czterech trybów:
+
+- **Bez zmian:** działa oryginalny tempomat z VESC
+- **Przycisk bistabilny:** tempomat włączasz i wyłączasz przyciskiem z zatrzaskiem
+- **Przycisk monostabilny:** tempomat włączasz zwykłym przyciskiem chwilowym
+- **Aktywacja po czasie:** tempomat włącza się, gdy trzymasz gaz w jednej pozycji przez kilka sekund (od 1 do 6 s, ustawiane suwakiem)
+
+W trybach z przyciskiem tempomat wyłącza się po wciśnięciu hamulca, a gazem można w trakcie regulować prędkość. W trybie aktywacji po czasie tempomat wyłącza się po ruszeniu gazem albo hamulcem.
 
 ---
 
@@ -18,88 +21,90 @@ Tempomat aktywowany przyciskiem wyłącza się po wciśnięciu hamulca a po naci
 
 <img width="864" height="1920" alt="VID_20260826_112219" src="https://github.com/user-attachments/assets/f946f95e-e01d-43fc-b037-c8e3c7119330" />
 
-### Ekran 1 Główne zegary
+### Ekran 1: główne zegary
 
-- Prąd fazowy, moc, prąd baterii, prędkość, napięcie, temperatura sterownika i silnika, zużycie energii
-- **Prąd baterii i moc sumowane ze wszystkich podłączonych sterowników** (pojazdy dwusilnikowe)
-- Zegar baterii z SOC i pozostałym zasięgiem
-- Słupki wciśnięcia gazu i hamulca
-- Przebieg, trasa, czas pracy
-- Efekt „wymiatania" wskazówek trwający podczas ładowania danych skryptu
-- kontrolka pokazująca stan tempomatu
+- prąd fazowy, moc, prąd baterii, prędkość, napięcie, temperatura sterownika i silnika, zużycie energii
+- prąd baterii i moc są sumowane ze wszystkich sterowników, więc w pojazdach dwusilnikowych widać łączne wartości
+- zegar baterii z poziomem naładowania (SOC) i pozostałym zasięgiem
+- paski pokazujące, jak mocno wciśnięty jest gaz i hamulec
+- przebieg, trasa i czas pracy
+- efekt „wymiatania" wskazówek, który trwa, dopóki skrypt ładuje dane
+- kontrolka stanu tempomatu
 
-### Ekran 2 Statystyki jazdy
+### Ekran 2: statystyki jazdy
 
-- SOC na początku jazdy i zużycie od tego momentu
-- Zużycie energii (Wh/km) liczone z SOC, oraz osobno z ostatnich 2 km wg VESC
-- Zasięg pozostały i zasięg 100–0%, liczone z tabelki SOC którą można dostosować pod swoją baterię
-- Maksymalny prąd baterii i prąd fazowy osobno dla każdego sterownika
-- Maksymalna moc, maksymalna rekuperacja, maksymalne i minimalne napięcie zarejestrowane podczas jazdy
-- **Guzik trybu Legal**  jeden przycisk włączający/wyłączający ograniczenia prędkości, mocy i prądu; działa poprawnie na pojazdach jedno- i dwusilnikowych, automatycznie zapamiętuje i przywraca oryginalne ustawienia obu sterowników
+- SOC na początku jazdy i ile od tego czasu ubyło
+- zużycie energii w Wh/km, liczone na dwa sposoby: z SOC oraz z ostatnich 2 km według VESC
+- pozostały zasięg i zasięg od 100 do 0%, liczone z tabeli SOC, którą możesz dopasować do swojej baterii
+- maksymalny prąd baterii i prąd fazowy, osobno dla każdego sterownika
+- maksymalna moc, maksymalna rekuperacja oraz najwyższe i najniższe napięcie z całej jazdy
+- **przycisk trybu Legal:** jednym kliknięciem włączasz albo wyłączasz ograniczenia prędkości, mocy i prądu. Działa przy jednym i dwóch silnikach, a oryginalne ustawienia obu sterowników zapamiętuje i przywraca sam
 
-### Ekran 3 Ustawienia
+### Ekran 3: ustawienia
 
-- **Lampka STOP** 3 tryby (wyłączona / zapala się przy hamowaniu / świeci stale i miga przy hamowaniu), próg aktywacji ustawiany suwakiem jako % wciśnięcia hamulca
-- Możliwość zmiany ustawień trybu Legal
-- Możliwość zmiany działania tempomatu
-- Mnożnik kalibracji napięcia — korekta niedokładności pomiaru napięcia mierzonego przez sterownik
-- Własna, edytowalna tabela SOC (krzywa napięciowa ogniwa)
-- Zapis ustawień do pamięci trwałej sterownika (EEPROM)
-
----
-
-### Trwałość ustawień
-
-Wszystkie ustawienia (próg lampki STOP, limity trybu Legal, tryb tempomatu, kalibracja napięcia, tabela SOC) żyją w pamięci RAM sterownika **przetrwają zamknięcie i ponowne otwarcie aplikacji**, niezależnie od telefonu. Żeby przetrwały też **fizyczny restart sterownika**, trzeba je dodatkowo zapisać do EEPROM przyciskiem „Zapisz ustawienia" na ekranie 3.
+- **lampka STOP** z trzema trybami: wyłączona, zapalana przy hamowaniu albo świecąca cały czas i migająca przy hamowaniu. Próg zadziałania ustawiasz suwakiem jako procent wciśnięcia hamulca
+- ustawienia limitów trybu Legal
+- wybór trybu tempomatu
+- mnożnik kalibracji napięcia, gdy sterownik mierzy je trochę niedokładnie
+- własna tabela SOC (krzywa napięcia ogniwa), którą można edytować
+- zapis ustawień do pamięci trwałej sterownika (EEPROM)
 
 ---
 
-### Obsługa wielu sterowników
+### Zapisywanie ustawień
 
-Prąd baterii, moc i statystyki maksimów sumują/śledzą dane z **obu** sterowników w pojeździe dwusilnikowym (CAN). Tryb Legal aplikuje limity osobno na każdym sterowniku i przywraca każdemu jego własne, oryginalne ustawienia nie zakłada, że oba mają identyczną konfigurację.
+Wszystkie ustawienia (próg lampki STOP, limity trybu Legal, tryb tempomatu, kalibracja napięcia, tabela SOC) są trzymane w pamięci RAM sterownika. Dzięki temu zostają po zamknięciu i ponownym otwarciu aplikacji, niezależnie od telefonu. Jeśli mają przetrwać też wyłączenie lub restart sterownika, trzeba je zapisać do EEPROM przyciskiem „Zapisz ustawienia" na ekranie 3.
+
+---
+
+### Dwa sterowniki
+
+W pojeździe dwusilnikowym (połączenie CAN) prąd baterii, moc i statystyki maksimów są liczone z obu sterowników. Tryb Legal ustawia limity na każdym sterowniku osobno i każdemu przywraca jego własną konfigurację, więc oba nie muszą być ustawione tak samo.
 
 ---
 
 ### Znane ograniczenia
 
-- **Reset do domyślnych** (ekran 3) resetuje tylko pamięć RAM sterownika żeby przetrwało restart, trzeba po nim dodatkowo kliknąć „Zapisz ustawienia"
-- **Po każdym wgraniu pakietu** może być konieczne jednorazowe kliknięcie `restart lispbm` w terminalu VESC Tool, żeby LispBM poprawnie wystartował przy kolejnym uruchomieniu sterownika (znane ograniczenie firmware od wersji 6.06)
-
+- Przycisk „Reset do domyślnych" na ekranie 3 czyści tylko pamięć RAM. Żeby reset przetrwał restart sterownika, kliknij potem jeszcze „Zapisz ustawienia".
+- Po wgraniu pakietu czasem trzeba raz wpisać `restart lispbm` w terminalu VESC Tool, żeby LispBM normalnie wystartował przy kolejnym uruchomieniu sterownika. To ograniczenie firmware, występuje od wersji 6.06.
 
 ---
 
 ### Tabele napięć ogniw
 
-Aby ułatwić dobór wartości do tabeli SOC dla różnych typów ogniw, dostępna jest tabela w Google Sheets z krzywymi napięciowymi wielu modeli ogniw litowo-jonowych:
- **[Tabela napięć ogniw – Google Sheets](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
+Żeby łatwiej było uzupełnić tabelę SOC, przygotowałem arkusz z krzywymi napięcia dla wielu popularnych ogniw litowo-jonowych:
 
-Na jej podstawie możesz odczytać poziom naładowania odpowiadający danemu napięciu ogniwa i wpisać go bezpośrednio na ekranie 3.
+**[Tabela napięć ogniw (Google Sheets)](https://docs.google.com/spreadsheets/d/1wsPdnuza7FB2aNU6BxtK0Lr6GHItDyqxO2WwJA4U54E/edit?usp=sharing)**
+
+Znajdź w niej swoje ogniwo, odczytaj, jakiemu poziomowi naładowania odpowiada dane napięcie, i wpisz wartości na ekranie 3.
 
 ---
 
 ### Wymagania
 
-- VESC Tool na android, Windows, Mac lub Linux, 
-- sterownik z firmware 6.06 lub wyższym
-- Multimetr lub smartBMS (do weryfikacji prawidłowego napięcia przy kalibracji)
+- VESC Tool na Androida, Windowsa, Maca lub Linuksa
+- sterownik z firmware 6.06 lub nowszym
+- multimetr albo smartBMS, żeby sprawdzić rzeczywiste napięcie przy kalibracji
 
 ---
 
 ## Instalacja
 
-Repozytorium zawiera dwa pakiety:
+W repozytorium są dwa pakiety:
 
-- **`SuperiorGauge_V3.0.vescpkg`** — główny pakiet (ekran wskaźników + cała logika). Wgraj na sterownik **tylny (master)**.
-- **`SlaveVESC.vescpkg`** — tylko przy **pojazdach dwusilnikowych**: wgraj na sterownik **przedni (slave)**, żeby odczytać z niego prąd fazowy.
+- **`SuperiorGauge_V3.0.vescpkg`**: główny pakiet z ekranem wskaźników i całą logiką. Wgraj go na **tylny sterownik (master)**.
+- **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgraj go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
 
-Pliki z poprzedniej wersji (v2) znajdują się w folderze `stary skryptV2`, zachowane archiwalnie.
+Pliki z poprzedniej wersji (V2) zostawiłem dla porządku w folderze `stary skryptV2`.
 
-Pełna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
+Dokładna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
 
 ---
 
 ## Licencja
 
-GNU General Public License v3.0 – szczegóły w pliku [LICENSE](LICENSE)
+GNU General Public License v3.0, szczegóły w pliku [LICENSE](LICENSE)
 
 ---
+
+Skrypt powstał z pomocą [Claude.ai](https://claude.ai).
