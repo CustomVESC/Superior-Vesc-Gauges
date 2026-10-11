@@ -92,12 +92,27 @@ Wystarczy znaleźć w niej swoje ogniwo, odczytać, jakiemu poziomowi naładowan
 
 W repozytorium są dwa pakiety:
 
-- **`SuperiorGauge_V3.0.vescpkg`**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
+- **[`SuperiorGauge v3.1.vescpkg`](SuperiorGauge v3.1.vescpkg)**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
 - **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgrywa się go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
 
 Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `StarySkryptV2`[Folder z poprzednią wersją skryptu](StarySkryptV2).
 
 Dokładna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
+
+---
+
+## Changelog
+
+**Wersja 3.1**
+* Tempomat w czterech trybach, w tym z fizycznym przyciskiem na TX
+
+**Wersja 3.0**
+* Edycja ustawień wewnątrz skryptu
+* Statystyki zapisywane w RAM sterownika, a nie telefonu jak w wersji 2.0 (przypadkowe wyjście z aplikacji nie resetuje statystyk)
+* Animacja wskazówek przy uruchamianiu skryptu
+* Interfejs po polsku
+* Poprawione działanie wirtualnego przycisku Legal (wyświetlanego na ekranie telefonu)
+* Wbudowany skrypt lampki STOP
 
 ---
 
