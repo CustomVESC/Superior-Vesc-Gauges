@@ -6,6 +6,8 @@ Superior Gauges to zamiennik domyślnego ekranu RT Data w VESC Tool. Zrobiłem g
 
 **V3.0** to projekt napisany od nowa. Logika działa teraz na sterowniku, a telefon odpowiada tylko za wyświetlanie zegarów. W praktyce oznacza to, że ustawienia siedzą w pamięci sterownika i nie znikają po zamknięciu aplikacji. Wszystko zmienia się bezpośrednio w apce, bez grzebania w kodzie na komputerze. Lampka STOP jest już częścią głównego skryptu, więc nie trzeba wgrywać osobnego pliku.
 
+Statystyki jazdy są zapisywane w pamięci sterownika, a nie telefonu jak w wersji 2.0, więc przypadkowe wyjście z aplikacji ich nie resetuje. Doszły też animacja wskazówek przy uruchamianiu skryptu, interfejs po polsku i poprawione działanie wirtualnego przycisku Legal wyświetlanego na ekranie telefonu.
+
 **V3.1** przynosi zmiany w tempomacie. Przy zegarach pojawiła się kontrolka pokazująca jego stan, a w ustawieniach można wybrać jeden z czterech trybów:
 
 - **Bez zmian:** działa oryginalny tempomat z VESC
@@ -98,21 +100,6 @@ W repozytorium są dwa pakiety:
 Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `StarySkryptV2`[Folder z poprzednią wersją skryptu](StarySkryptV2).
 
 Dokładna instrukcja krok po kroku: [Instrukcja instalacji](Instrukcja.md)
-
----
-
-## Changelog
-
-**Wersja 3.1**
-* Tempomat w czterech trybach, w tym z fizycznym przyciskiem na TX
-
-**Wersja 3.0**
-* Edycja ustawień wewnątrz skryptu
-* Statystyki zapisywane w RAM sterownika, a nie telefonu jak w wersji 2.0 (przypadkowe wyjście z aplikacji nie resetuje statystyk)
-* Animacja wskazówek przy uruchamianiu skryptu
-* Interfejs po polsku
-* Poprawione działanie wirtualnego przycisku Legal (wyświetlanego na ekranie telefonu)
-* Wbudowany skrypt lampki STOP
 
 ---
 
