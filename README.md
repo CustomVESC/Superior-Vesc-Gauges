@@ -92,7 +92,7 @@ Wystarczy znaleźć w niej swoje ogniwo, odczytać, jakiemu poziomowi naładowan
 
 W repozytorium są dwa pakiety:
 
-- **[`SuperiorGauge v3.1.vescpkg`](SuperiorGauge v3.1.vescpkg)**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
+- **[`SuperiorGauge v3.1.vescpkg`](SuperiorGauge_v3.1.vescpkg)**: główny pakiet z ekranem wskaźników i całą logiką. Wgrywa się go na **tylny sterownik (master)**.
 - **`SlaveVESC.vescpkg`**: potrzebny tylko w **pojazdach dwusilnikowych**. Wgrywa się go na **przedni sterownik (slave)**, żeby dało się odczytać z niego prąd fazowy.
 
 Pliki z poprzedniej wersji (V2) zostały dla porządku zachowane w folderze `StarySkryptV2`[Folder z poprzednią wersją skryptu](StarySkryptV2).
