@@ -21,7 +21,7 @@ W trybach z przyciskiem tempomat wyłącza się po wciśnięciu hamulca, a gazem
 
 ## Ekran wskaźników
 
-<img width="432" height="960" alt="VID_20260826_112219" src="https://github.com/user-attachments/assets/f946f95e-e01d-43fc-b037-c8e3c7119330" />
+<img width="864" height="1960" alt="VID_20260826_112219" src="https://github.com/user-attachments/assets/f946f95e-e01d-43fc-b037-c8e3c7119330" />
 
 ### Ekran 1: główne zegary
 
