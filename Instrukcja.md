@@ -1,5 +1,5 @@
 Instalacja skryptu
-<img width="1068" height="2120" alt="IMG_20261013_102706" src="https://github.com/user-attachments/assets/265f8378-b56e-434e-9fd8-8afc39e42196" />
+<img width="168" height="220" alt="IMG_20261013_102706" src="https://github.com/user-attachments/assets/265f8378-b56e-434e-9fd8-8afc39e42196" />
 
 <img width="1065" height="2127" alt="IMG_20261013_102726" src="https://github.com/user-attachments/assets/d1ca9878-4938-46bc-bab8-2a0daeb855b4" />
 
