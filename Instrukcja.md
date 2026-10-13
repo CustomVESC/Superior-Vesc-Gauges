@@ -1,6 +1,6 @@
 ## 1. Pobieranie skryptu z GitHuba
 
-Pobierz plik `SuperiorGauge....vescpkg`. Jeśli masz dwa sterowniki, pobierz też `SlaveVESC.vescpkg`.
+Pobierz plik `SuperiorGauge v3.1.vescpkg`. Jeśli masz dwa sterowniki, pobierz też `SlaveVESC.vescpkg`.
 
 <img height="450" alt="IMG_20261013_102706" src="https://github.com/user-attachments/assets/265f8378-b56e-434e-9fd8-8afc39e42196" />
 <img height="450" alt="IMG_20261013_102726" src="https://github.com/user-attachments/assets/d1ca9878-4938-46bc-bab8-2a0daeb855b4" />
