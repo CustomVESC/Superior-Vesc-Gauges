@@ -85,7 +85,7 @@ Wystarczy znaleźć w niej swoje ogniwo, odczytać, jakiemu poziomowi naładowan
 
 - VESC Tool na Androida, Windowsa, Maca lub Linuksa
 - sterownik z firmware 6.06 lub nowszym
-- multimetr albo smartBMS, żeby sprawdzić rzeczywiste napięcie przy kalibracji
+-  opcjonalnie multimetr albo smartBMS, żeby sprawdzić rzeczywiste napięcie przy kalibracji
 
 ---
 
